@@ -1,15 +1,24 @@
-在虚拟机上安装 pycharm 并配置环境 1.使用虚拟机自带的 python2.7 环境
-使用 wget 指令从 pycharm 官网下载 pycharm 压缩包
-wget https://download.jetbrains.com/python/pycharm-community-2024.2.4.tar.gz
-解压缩
-tar -xzvf pycharm-community-2024.2.4.tar.gz
+[toc] 在虚拟机上安装 pycharm 并配置环境
+
+# 1.使用虚拟机自带的 python2.7 环境
+
+使用 wget 指令从 pycharm 官网下载 pycharm 压缩包<br>
+`wget https://download.jetbrains.com/python/pycharm-community-2024.2.4.tar.gz`
+
+解压缩: `tar -xzvf pycharm-community-2024.2.4.tar.gz`
+
 打开终端，进入文件的 bin 目录，运行. pycharm.sh 命令
 
 点击 new 新建项目，将图中所示解释器选为虚拟机的 bin 目录下自带的 Python2.7
+
 ![alt text](image.png)
+
 下载 get-pip.py:
-wget https://bootstrap.pypa.io/get-pip.py \*如果显示版本过低而报错可以尝试下载 2.7 版本的 pip（因为 Python 2.7 不再得到官方支持，下载的链接可能已经失效）。
-wget https://bootstrap.pypa.io/pip/2.7/get-pip.py
+
+`wget https://bootstrap.pypa.io/get-pip.py`
+
+> \*如果显示版本过低而报错可以尝试下载 2.7 版本的 pip（因为 Python 2.7 不再得到官方支持，下载的链接可能已经失效）。
+> `wget https://bootstrap.pypa.io/pip/2.7/get-pip.py(2.7 版本)`
 
 说明：
 因为 Python 2.7 已经在 2020 年停止支持，推荐你尽可能使用 Python 3.x。如果你能安装 Python 3.x，那么你可以使用更新版的 pip 来进行包管理。
