@@ -1,8 +1,8 @@
-**在虚拟机上安装pycharm并配置环境**
+**在虚拟机上安装 pycharm 并配置环境**
 
-**1.使用虚拟机自带的python2.7环境**
+**1.使用虚拟机自带的 python2.7 环境**
 
-使用wget指令从pycharm官网下载pycharm压缩包
+使用 wget 指令从 pycharm 官网下载 pycharm 压缩包
 
 **[wget
 <https://download.jetbrains.com/python/pycharm-community-2024.2.4.tar.gz>]{.mark}**
@@ -11,12 +11,12 @@
 
 **[tar -xzvf pycharm-community-2024.2.4.tar.gz]{.mark}**
 
-打开终端，进入文件的bin目录，运行. pycharm.sh命令
+打开终端，进入文件的 bin 目录，运行. pycharm.sh 命令
 
 ![](media/image1.png){width="5.768055555555556in"
 height="0.5909722222222222in"}
 
-点击new新建项目，将图中所示解释器选为虚拟机的bin目录下自带的Python2.7
+点击 new 新建项目，将图中所示解释器选为虚拟机的 bin 目录下自带的 Python2.7
 
 ![](media/image2.png){width="5.768055555555556in"
 height="4.052777777777778in"}
@@ -24,11 +24,11 @@ height="4.052777777777778in"}
 ![](media/image3.png){width="5.768055555555556in"
 height="4.266666666666667in"}
 
-下载get-pip.py:
+下载 get-pip.py:
 
 **[wget <https://bootstrap.pypa.io/get-pip.py>]{.mark}**
 
-\*如果显示版本过低而报错可以尝试下载2.7版本的pip（因为 Python 2.7
+\*如果显示版本过低而报错可以尝试下载 2.7 版本的 pip（因为 Python 2.7
 不再得到官方支持，下载的链接可能已经失效）。
 
 **[wget <https://bootstrap.pypa.io/pip/2.7/get-pip.py>]{.mark}**
@@ -44,7 +44,7 @@ height="4.266666666666667in"}
 
 **[pip3 --version]{.mark}** 确认是否安装成功
 
-如果无法通过yum下载软件包可能是由于网络连接问题或配置的镜像源不可用，以下给出几种解决方案：
+如果无法通过 yum 下载软件包可能是由于网络连接问题或配置的镜像源不可用，以下给出几种解决方案：
 
 1.  检查网络连接
 
@@ -74,7 +74,7 @@ baseurl=http://vault.centos.org/centos/7.9.2009/os/x86_64/。
 4\. 使用离线安装
 
 > 如果你无法解决镜像源的问题，可以尝试在其他机器上下载 Python 3
-> 的安装包，使用 U盘等方式将其传输到虚拟机上进行手动安装。
+> 的安装包，使用 U 盘等方式将其传输到虚拟机上进行手动安装。
 
 5\. 使用 dnf（如果可用）
 
@@ -85,7 +85,7 @@ baseurl=http://vault.centos.org/centos/7.9.2009/os/x86_64/。
 
 > 如果没有 dnf，则可以尝试按照上面的方法进行配置
 
-运行脚本安装pip:
+运行脚本安装 pip:
 
 **[python get-pip.py]{.mark}** 对于 Python 2.x
 
@@ -115,7 +115,7 @@ Type=Application
 
 Categories=Development;IDE;
 
-\*注意Exec和Icon部分要写入自己的文件路径
+\*注意 Exec 和 Icon 部分要写入自己的文件路径
 
 \[Desktop Entry\]
 
@@ -135,13 +135,13 @@ Type=Application
 
 Categories=Development;IDE;
 
-\*注意Exec和Icon部分要写入自己的文件路径
+\*注意 Exec 和 Icon 部分要写入自己的文件路径
 
 通过 chmod +x 给 pycharm.desktop 文件添加执行权限
 
 **[chmod +x \~/桌面/pycharm.desktop]{.mark}**
 
-pip下载速度可能太慢建议使用镜像源：
+pip 下载速度可能太慢建议使用镜像源：
 
 创建全局配置文件
 
@@ -155,22 +155,23 @@ pip下载速度可能太慢建议使用镜像源：
 
 保存并退出
 
-**2创建虚拟环境**
+**2 创建虚拟环境**
 
-若想要创建虚拟环境需要确保虚拟机中安装了python3，python2.7已经停止支持，很多现代的python工具和库都只支持python3
+若想要创建虚拟环境需要确保虚拟机中安装了 python3，python2.7 已经停止支持，很多现代的 python 工具和库都只支持 python3
 
-1.首先确保虚拟机中安装了python3
+1.首先确保虚拟机中安装了 python3
 
 **[sudo yum install python3]{.mark}**
 
-2.安装virtualenv，可以通过pip3安装virtualenv
+2.安装 virtualenv，可以通过 pip3 安装 virtualenv
 
 **[sudo yum install python3-pip]{.mark}**
 
-> **[pip3 install virtualenv]{.mark}**（或者**[sudo pip3 install
-> virtualenv]{.mark}**）
+> **[pip3 install virtualenv]{.mark}**（或者\*\*[sudo pip3 install
+>
+> > virtualenv]{.mark}\*\*）
 
-（pip需要加入到环境变量中:[**echo \'export
+（pip 需要加入到环境变量中:[**echo \'export
 PATH=\$PATH:/root/.local/bin\' \>\> \~/.bashrc** **source
 \~/.bashrc**]{.mark}）
 
@@ -182,21 +183,21 @@ PATH=\$PATH:/root/.local/bin\' \>\> \~/.bashrc** **source
 
 **[source myenv/bin/activate]{.mark}**
 
-python3已经自带了venv模块，它也可以用来创建虚拟环境，不需要额外安装任何安装包：
+python3 已经自带了 venv 模块，它也可以用来创建虚拟环境，不需要额外安装任何安装包：
 **[python3 -m venv myenv]{.mark}**
 
 5，退出虚拟环境
 
 **[deactivate]{.mark}**
 
-**3.创建conda环境**
+**3.创建 conda 环境**
 
-1.安装Miniconda（更轻量版的conda）
+1.安装 Miniconda（更轻量版的 conda）
 
 **[wget
 <https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh>]{.mark}**
 
-\*也可以下载完整的anaconda发行版：
+\*也可以下载完整的 anaconda 发行版：
 
 **[wget
 <https://repo.anaconda.com/archive/Anaconda3-2023.09-Linux-x86_64.sh>]{.mark}**
@@ -207,7 +208,7 @@ python3已经自带了venv模块，它也可以用来创建虚拟环境，不需
 
 **[\*bash Anaconda3-2023.09-Linux-x86_64.sh]{.mark}**
 
-3.初始化conda
+3.初始化 conda
 
 **[source \~/miniconda3/bin/activate]{.mark}**
 
@@ -230,17 +231,17 @@ python3已经自带了venv模块，它也可以用来创建虚拟环境，不需
 /home/1204/myenv/bin/activate）或者如果已经在正确的目录中可以直接激活虚拟环境：**[activate
 myenv]{.mark}**）
 
-再次进入conda环境：**[conda activate \<环境名\>]{.mark}** （例如：conda
+再次进入 conda 环境：**[conda activate \<环境名\>]{.mark}** （例如：conda
 activate mycondaenv）
 
 **说明（可能遇见的问题）：**
 
 "Cannot find a valid baseurl for repo: base/7/x86_64"
-出现此类报错可能是centos无法访问默认的mirrorlist.centos.org，可能是网络连接问题或者DNS配置不正确导致无法获取软件包仓库的镜像列表
+出现此类报错可能是 centos 无法访问默认的 mirrorlist.centos.org，可能是网络连接问题或者 DNS 配置不正确导致无法获取软件包仓库的镜像列表
 
 解决方案：
 
-1.  检查网络连接：首先确认服务器能连接到互联网，可使用ping命令；来测试与外部服务器的链接，若不能链接检查网络设置（例如DNS配置，网关等）确保服务器有正确的网络访问权限，可以检查网络接口：**[ip
+1.  检查网络连接：首先确认服务器能连接到互联网，可使用 ping 命令；来测试与外部服务器的链接，若不能链接检查网络设置（例如 DNS 配置，网关等）确保服务器有正确的网络访问权限，可以检查网络接口：**[ip
     addr show ens33]{.mark}** 尝试重启：
 
 > **[sudo ifdown ens33]{.mark}**
@@ -255,7 +256,7 @@ activate mycondaenv）
 编辑/etc/yum.repos.d/CentOS-Base.repo 文件（**[sudo vi
 /etc/yum.repos.d/CentOS-Base.repo]{.mark}**），找到
 \[base\]、\[updates\] 和其他仓库部分，将其 mirrorlist 行替换为
-baseurl，mirrorlist行注释掉，并指定一个可用的镜像源。例如，使用阿里云的
+baseurl，mirrorlist 行注释掉，并指定一个可用的镜像源。例如，使用阿里云的
 CentOS
 镜像源：[[http://mirrors.aliyun.com/centos/7/os/x86_64/]{.mark}](http://mirrors.aliyun.com/centos/7/os/x86_64/)
 文件配置如下：
@@ -344,11 +345,11 @@ http://mirrors.cloud.aliyuncs.com/centos/\$releasever/centosplus/\$basearch/
 
 \"/etc/yum.repos.d/CentOS-Base.repo\" 62L, 2523C
 
-3.  修改DNS配置
+3.  修改 DNS 配置
 
 打开/etc/resolv.conf 文件：**[sudo vi /etc/resolv.conf]{.mark}**
 
-在文件中添加Google公共DNS服务器
+在文件中添加 Google 公共 DNS 服务器
 
 **[nameserver 8.8.8.8]{.mark}**
 
@@ -356,17 +357,17 @@ http://mirrors.cloud.aliyuncs.com/centos/\$releasever/centosplus/\$basearch/
 
 保存并关闭文件然后再次尝试更新：**[sudo yum update]{.mark}**
 
-可以测试DNS解析是否正常：**[nslookup mirror.centos.org]{.mark}** 或者
+可以测试 DNS 解析是否正常：**[nslookup mirror.centos.org]{.mark}** 或者
 
 **[dig mirror.centos.org]{.mark}**
 
-如果对DNS配置做了更改可以重启NetworkManager服务来应用新的配置：
+如果对 DNS 配置做了更改可以重启 NetworkManager 服务来应用新的配置：
 
 **[sudo systemctl restart NetworkManager]{.mark}**
 
 "http://mirror.centos.org/centos/7/extras/x86_64/repodata/repomd.xml:
 \[Errno 14\] HTTP Error 404 - Not Found"
-若出现这类报错可以临时禁用extras仓库：
+若出现这类报错可以临时禁用 extras 仓库：
 
 **[sudo yum \--disablerepo=extras update]{.mark}**
 
@@ -423,9 +424,9 @@ Group，VG）和逻辑卷（LV）名称来设定的。你可以使用 **[lvdispl
 
 这样会将所有可用的空闲空间分配给根逻辑卷。
 
-5.  扩展文件系统：最后，扩展文件系统以使用新扩展的空间，如果文件系统是XFS使用
+5.  扩展文件系统：最后，扩展文件系统以使用新扩展的空间，如果文件系统是 XFS 使用
     xfs_growfs 命令：**[sudo xfs_growfs /dev/centos/root]{.mark}**
-    （如果使用的是ext4文件系统可以使用：**[sudo resize2fs
+    （如果使用的是 ext4 文件系统可以使用：**[sudo resize2fs
     /dev/centos/root]{.mark}**）可以使用**[df -h]{.mark}**验证空间变化
 
 > 如果物理卷未自动扩展：
@@ -469,5 +470,6 @@ partprobe]{.mark}**
 最后，扩展 XFS 文件系统来使用新的空间：
 
 **[sudo xfs_growfs /dev/centos/root]{.mark}**
-#   V M w a r e - i n s t a l l - m a n u a l  
+#   V M w a r e - i n s t a l l - m a n u a l 
+ 
  
