@@ -469,3 +469,5 @@ partprobe]{.mark}**
 最后，扩展 XFS 文件系统来使用新的空间：
 
 **[sudo xfs_growfs /dev/centos/root]{.mark}**
+#   V M w a r e - i n s t a l l - m a n u a l  
+ 
