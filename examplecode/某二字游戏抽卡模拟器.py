@@ -21,7 +21,9 @@ GOLD = (255, 215, 0)
 PURPLE = (147, 112, 219)
 
 # 设置字体
-font_path = r"C:\Users\32899\python\.vscode\fonts\dingliezhuhaifont-20240831GengXinBan)-2.ttf"
+current_dir = os.path.dirname(__file__)
+
+font_path = os.path.join(current_dir, 'fonts', 'dingliezhuhaifont-20240831GengXinBan)-2.ttf')
 if os.path.exists(font_path):
     font = pygame.font.Font(font_path, 24)
     large_font = pygame.font.Font(font_path, 36)
