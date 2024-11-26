@@ -1,4 +1,4 @@
-## 语言切换
+## Language Switching
 
 [Switch to English](en/manual_en.md) | [切换到中文](zh/manual.md)
 
