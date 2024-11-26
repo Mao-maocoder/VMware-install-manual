@@ -1,3 +1,7 @@
+## 语言切换
+
+[Switch to English](en/manual_en.md) | [切换到中文](zh/manual.md)
+
 # 在虚拟机上安装 PyCharm 并配置环境
 
 ## 1. 使用虚拟机自带的 Python 2.7 环境
