@@ -1,3 +1,7 @@
+## Language Switching
+
+[Switch to English](https://github.com/Mao-maocoder/VMware-install-manual/blob/main/manual_en.md) | [切换到中文](https://github.com/Mao-maocoder/VMware-install-manual/blob/main/manual.md)
+
 # Installing PyCharm and Configuring the Environment on a Virtual Machine
 
 ## 1. Using the Virtual Machine's Built-in Python 2.7 Environment
