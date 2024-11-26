@@ -1,6 +1,6 @@
 ## Language Switching
 
-[Switch to English](en/manual_en.md) | [切换到中文](zh/manual.md)
+[Switch to English](https://github.com/Mao-maocoder/VMware-install-manual/blob/main/manual_en.md) | [切换到中文](https://github.com/Mao-maocoder/VMware-install-manual/blob/main/manual.md)
 
 # 在虚拟机上安装 PyCharm 并配置环境
 
