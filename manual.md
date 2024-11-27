@@ -228,3 +228,24 @@
 ## 5. 总结
 
 通过上述步骤，你可以在虚拟机中成功安装并配置 PyCharm，创建虚拟环境（使用 `virtualenv` 或 `conda`），并解决一些常见的安装和配置问题。如果可能，尽量使用 Python 3.x 环境，以避免 Python 2.7 停止支持后出现的问题。
+
+可以简单写一个代码测试环境是否搭建成功,创建好代码文件后如果不想以后再一次次的进入代码所在的目录可以编写一个脚本以便下次可以直接访问你的代码文件
+ ```bash
+ touch yourcode.sh # 创建脚本文件
+ vim yourcode.sh # 编辑脚本文件
+ ```
+ 脚本内容
+ 
+ ```bash
+ #!/bin/bash
+
+# 激活 Conda 环境（如果使用了 Conda）
+source /root/miniconda3/bin/activate base  # 根据你的 Conda 安装路径修改
+
+# 切换到 Python 项目目录
+cd /home/1204/PycharmProjects/pythonProject
+
+# 运行 Python 脚本
+python Snake.py
+```
+

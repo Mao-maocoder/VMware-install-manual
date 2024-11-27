@@ -253,3 +253,25 @@ sudo systemctl restart network
 ## 5. Conclusion
 
 By following the steps above, you can successfully install and configure PyCharm on your virtual machine, create a virtual environment (using `virtualenv` or `conda`), and solve common installation and configuration issues. If possible, it is recommended to use Python 3.x to avoid issues after Python 2.7 is no longer supported.
+
+You can write a simple code to test if the environment is set up successfully. After creating the code files, if you don't want to navigate to the code directory every time, you can write a script to directly access your code files next time.
+
+```bash
+ touch yourcode.sh # Create the script file
+ vim yourcode.sh # Edit the script file
+```
+
+The script content should be:
+
+```bash
+#!/bin/bash
+
+# Activate Conda environment（if you're using Conda）
+source /root/miniconda3/bin/activate base  # Modify accroding to your conda installation path
+
+# Change to your Python project directory
+cd /home/1204/PycharmProjects/pythonProject
+
+# Run the Python script
+python Snake.py
+```
